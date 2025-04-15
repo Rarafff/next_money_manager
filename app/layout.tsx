@@ -2,18 +2,23 @@ import type { Metadata } from "next";
 import { Inter, IBM_Plex_Serif } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
 
 const ibmPlexSerif = IBM_Plex_Serif({
   variable: "--font-ibm-plex-serif",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
-  title: "RV Money App",
-  description: "Modern Solution for Modern Problem",
-  icons: "/icons/logo.svg",
+  title: "RV",
+  description: "RV is a banking app for the modern world.",
+  icons: {
+    icon: "/icons/logo/svg",
+  },
 };
 
 export default function RootLayout({
